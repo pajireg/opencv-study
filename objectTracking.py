@@ -22,8 +22,8 @@ while 1:
         mask = cv2.inRange(hsv, lower_blue, upper_blue)
 
         # bit 연산자를 통해서 blue 영역만 남김
-        # res = cv2.bitwise_and(frame, frame, mask=mask)
-        res = cv2.bitwise_not(frame, frame, mask=mask)
+        res = cv2.bitwise_and(frame, frame, mask=mask)
+        # res = cv2.bitwise_not(frame, frame, mask=mask)
 
         cv2.imshow('frame', frame)
         cv2.imshow('mask', mask)

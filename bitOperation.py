@@ -17,7 +17,7 @@ def bitOperation(hpos, vpos):
     img2_fg = cv2.bitwise_and(img2, img2, mask=mask)
 
     dst = cv2.add(img1_bg, img2_fg)
-    img1[vpos:rows + vpos, hpos:cols + hpos] + dst
+    img1[vpos:rows + vpos, hpos:cols + hpos] = dst
 
     cv2.imshow('result', img1)
     cv2.waitKey(0)
